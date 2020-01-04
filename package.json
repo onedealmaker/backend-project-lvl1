@@ -1,7 +1,7 @@
 {
   "name": "braingames_likhvar",
   "version": "1.0.5",
-  "description": "",
+  "description": "games_project",
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
