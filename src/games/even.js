@@ -11,9 +11,9 @@ const logic = () => {
   return cons(randomNumber, rightAnswer);
 };
 
-const engine = (description, logic) => {
+const engine = (task, game) => {
   console.log('Welcome to the Brain Games!');
-  console.log(description);
+  console.log(task);
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
 
@@ -23,7 +23,7 @@ const engine = (description, logic) => {
       return;
     }
 
-    const trueAnswer = logic();
+    const trueAnswer = game();
     console.log(`Question: ${car(trueAnswer)}`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
