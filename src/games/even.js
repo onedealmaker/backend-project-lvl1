@@ -3,13 +3,13 @@ import { cons, car, cdr } from '@hexlet/pairs';
 
 const rightAnwersNeed = 3;
 const description = 'Answer "yes" if number even otherwise answer "no".';
-const isNumberEven = num => num % 2 === 0;
+const isNumberEven = (num) => num % 2 === 0;
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const logic = () => {
-    const randomNumber = getRandomNumber(1, 100);
-    const rightAnswer = isNumberEven(randomNumber) ? 'yes' : 'no';
-    return cons(randomNumber, rightAnswer);
-  };
+  const randomNumber = getRandomNumber(1, 100);
+  const rightAnswer = isNumberEven(randomNumber) ? 'yes' : 'no';
+  return cons(randomNumber, rightAnswer);
+};
 
 const engine = (description, logic) => {
   console.log('Welcome to the Brain Games!');
