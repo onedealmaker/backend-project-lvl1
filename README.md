@@ -14,4 +14,4 @@
 3. [![asciicast](https://asciinema.org/a/292965.svg)](https://asciinema.org/a/292965)
 
 ### Launch game "grand common divisor"
-4.
+4. [![asciicast](https://asciinema.org/a/292984.svg)](https://asciinema.org/a/292984)
