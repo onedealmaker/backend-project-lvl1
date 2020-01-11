@@ -1,4 +1,5 @@
-import engine, { getRandomNumber, cons } from '../fasade';
+import { engine } from '..';
+import { getRandomNumber, cons } from '../fasade';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const isNumberEven = (num) => num % 2 === 0;
