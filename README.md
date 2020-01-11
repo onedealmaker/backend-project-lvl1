@@ -5,4 +5,11 @@
 [![Build Status](https://api.travis-ci.org/onedealmaker/backend-project-lvl1.svg?branch=master)](https://api.travis-ci.org/onedealmaker/backend-project-lvl1)
 
 Packadge installation:
-[![asciicast](https://asciinema.org/a/XNsbDDHpo00cB2rFeiyIG4fah.svg)](https://asciinema.org/a/XNsbDDHpo00cB2rFeiyIG4fah)
+
+[![asciicast](https://asciinema.org/a/292963.svg)](https://asciinema.org/a/292963)
+
+Launch game "is even?":
+[![asciicast](https://asciinema.org/a/292964.svg)](https://asciinema.org/a/292964)
+
+Launch game "calc":
+[![asciicast](https://asciinema.org/a/292965.svg)](https://asciinema.org/a/292965)
