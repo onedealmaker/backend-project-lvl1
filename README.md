@@ -9,6 +9,7 @@ First make `git clone https://github.com/onedealmaker/backend-project-lvl1.git`
 1. 'make install' - to install dependencies;
 1. 'make publish' - to locally publish the package;
 1. 'sudo npm install braingames_likhvar -g' - to install the package globally;
+
     you can type "brain-games" - and the game ask for your name and say wellcome!
 
 [![asciicast](https://asciinema.org/a/293179.svg)](https://asciinema.org/a/293179)
