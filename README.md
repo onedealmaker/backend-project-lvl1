@@ -5,13 +5,15 @@
 [![Build Status](https://api.travis-ci.org/onedealmaker/backend-project-lvl1.svg?branch=master)](https://api.travis-ci.org/onedealmaker/backend-project-lvl1)
 ## Brain-Games
 ### Packadge installation:
-1. [![asciicast](https://asciinema.org/a/292963.svg)](https://asciinema.org/a/292963)
 
+[![asciicast](https://asciinema.org/a/292963.svg)](https://asciinema.org/a/292963)
 ### Launch game "is even?":
-2. [![asciicast](https://asciinema.org/a/292964.svg)](https://asciinema.org/a/292964)
 
+[![asciicast](https://asciinema.org/a/292964.svg)](https://asciinema.org/a/292964)
 ### Launch game "calc":
-3. [![asciicast](https://asciinema.org/a/292965.svg)](https://asciinema.org/a/292965)
+[![asciicast](https://asciinema.org/a/292965.svg)](https://asciinema.org/a/292965)
 
 ### Launch game "grand common divisor"
-4. [![asciicast](https://asciinema.org/a/292984.svg)](https://asciinema.org/a/292984)
+[![asciicast](https://asciinema.org/a/292984.svg)](https://asciinema.org/a/292984)
+
+### Launch game "progression"
