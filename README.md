@@ -17,3 +17,4 @@
 [![asciicast](https://asciinema.org/a/292984.svg)](https://asciinema.org/a/292984)
 
 ### Launch game "progression"
+[![asciicast](https://asciinema.org/a/293169.svg)](https://asciinema.org/a/293169)
