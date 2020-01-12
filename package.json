@@ -1,6 +1,6 @@
 {
   "name": "braingames_likhvar",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "backend-project-lvl1",
   "main": "dist/index.js",
   "bin": {

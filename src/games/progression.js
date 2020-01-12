@@ -2,25 +2,24 @@ import { engine } from '..';
 import { getRandomNumber, cons } from '../fasade';
 
 const description = 'What number is missing in the progression?';
+
 const logic = () => {
-  const progressionStep = getRandomNumber(11, 21);
+  const progressionStep = getRandomNumber(11, 21); // logic will add this value every cycle
   const theFirstNum = getRandomNumber(1, 10);
   const numOfRightAnswer = getRandomNumber(1, 10);
-  let progressionStr = theFirstNum;
-  const progressionAsString = (cycle, str) => {
-    if (cycle + 2 > 10) return str;
-    progressionStr += progressionStep;
-    if (cycle + 2 === numOfRightAnswer) {
-      return progressionAsString(cycle + 1, `${str} ..`);
+
+  const progressionAsString = (cycle, acc) => {
+    if (cycle >= 10) return acc; // amount of values in progression = 10
+    if (cycle === numOfRightAnswer - 1) {
+      if (cycle === 0) return progressionAsString(cycle + 1, '.. ');
+      return progressionAsString(cycle + 1, `${acc}.. `);
     }
 
-    return progressionAsString(cycle + 1, `${str} ${progressionStr}`);
+    const value = theFirstNum + progressionStep * cycle;
+    return progressionAsString(cycle + 1, `${acc}${value} `);
   };
-  const rightAnswer = (cycle, b) => {
-    if (cycle === 1) return b;
-    return rightAnswer(cycle - 1, b + progressionStep);
-  };
-  return cons(progressionAsString(0, `${theFirstNum}`), `${rightAnswer(numOfRightAnswer, theFirstNum)}`);
+  const rightAnswer = `${theFirstNum + progressionStep * (numOfRightAnswer - 1)}`;
+  return cons(progressionAsString(0, ''), rightAnswer);
 };
 
 export default () => engine(description, logic);
