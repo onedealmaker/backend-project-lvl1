@@ -18,3 +18,5 @@
 
 ### Launch game "progression"
 [![asciicast](https://asciinema.org/a/293169.svg)](https://asciinema.org/a/293169)
+
+### Launch game "is prime?"
