@@ -19,6 +19,10 @@
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
+  "keywords": [
+    "hexlet",
+    "backend-project-lvl1"
+  ],
   "author": "Alexander Likhvar",
   "license": "ISC",
   "devDependencies": {
