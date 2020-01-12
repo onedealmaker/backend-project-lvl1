@@ -6,18 +6,19 @@
 ## Brain-Games
 ### Packadge installation:
 
-[![asciicast](https://asciinema.org/a/292963.svg)](https://asciinema.org/a/292963)
+[![asciicast](https://asciinema.org/a/293179.svg)](https://asciinema.org/a/293179)
 ### Launch game "is even?":
 
-[![asciicast](https://asciinema.org/a/292964.svg)](https://asciinema.org/a/292964)
+[![asciicast](https://asciinema.org/a/293180.svg)](https://asciinema.org/a/293180)
 ### Launch game "calc":
-[![asciicast](https://asciinema.org/a/292965.svg)](https://asciinema.org/a/292965)
 
+[![asciicast](https://asciinema.org/a/293181.svg)](https://asciinema.org/a/293181)
 ### Launch game "grand common divisor"
-[![asciicast](https://asciinema.org/a/292984.svg)](https://asciinema.org/a/292984)
 
+[![asciicast](https://asciinema.org/a/293182.svg)](https://asciinema.org/a/293182)
 ### Launch game "progression"
-[![asciicast](https://asciinema.org/a/293169.svg)](https://asciinema.org/a/293169)
 
+[![asciicast](https://asciinema.org/a/293183.svg)](https://asciinema.org/a/293183)
 ### Launch game "is prime?"
-[![asciicast](https://asciinema.org/a/293178.svg)](https://asciinema.org/a/293178)
+
+[![asciicast](https://asciinema.org/a/293184.svg)](https://asciinema.org/a/293184)
