@@ -2,9 +2,9 @@
   "name": "braingames_likhvar",
   "version": "1.1.1",
   "description": "backend-project-lvl1",
-  "main": "dist/index.js",
+  "main": "",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
+    "brain-games": "dist/bin/brain-hello.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-gcd": "dist/bin/brain-gcd.js",

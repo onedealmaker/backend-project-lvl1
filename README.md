@@ -1,7 +1,7 @@
 # backend-project-lvl1
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/5c67789660431caf1ce2/maintainability)](https://codeclimate.com/github/onedealmaker/backend-project-lvl1/maintainability)
-[![Build Status](https://api.travis-ci.org/onedealmaker/backend-project-lvl1.svg?branch=master)](https://api.travis-ci.org/onedealmaker/backend-project-lvl1)
+[![Build Status](https://travis-ci.org/onedealmaker/backend-project-lvl1.svg?branch=master)](https://travis-ci.org/onedealmaker/backend-project-lvl1)
 ## Brain-Games
 ### Packadge installation:
 First make `git clone https://github.com/onedealmaker/backend-project-lvl1.git`

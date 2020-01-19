@@ -1,4 +1,4 @@
-import { engine } from '..';
+import engine from '..';
 import { getRandomNumber, cons } from '../fasade';
 
 const description = 'Find the greatest common divisor of given numbers.';

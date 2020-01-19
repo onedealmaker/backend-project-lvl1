@@ -1,4 +1,4 @@
-import { engine } from '..';
+import engine from '..';
 import { getRandomNumber, cons } from '../fasade';
 
 const description = 'What number is missing in the progression?';
