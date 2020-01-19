@@ -2,7 +2,7 @@ import { readlineSync, car, cdr } from './fasade';
 
 const rightAnwersNeed = 3;
 
-export default (task, questionAndAnswer) => {
+export default (task, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(task);
   const playerName = readlineSync.question('May I have your name? ');
@@ -14,9 +14,11 @@ export default (task, questionAndAnswer) => {
       return;
     }
 
-    console.log(`Question: ${car(questionAndAnswer())}`);
+    const questionAndAnswer = getQuestionAndAnswer();
+    const question = car(questionAndAnswer);
+    const trueAnswer = cdr(questionAndAnswer);
+    console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
-    const trueAnswer = cdr(questionAndAnswer());
 
     if (playerAnswer === trueAnswer) {
       console.log('Correct!');
