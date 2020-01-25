@@ -5,15 +5,15 @@ const description = 'What is the result of the expression?';
 const operators = '-+*';
 
 const calculator = (firstMember, operatorIndex, secondMember) => {
-  let rightAnswer = 0;
+  let result = '';
   switch (operators.charAt(operatorIndex)) {
-    case '-': rightAnswer = firstMember - secondMember;
+    case '-': result = `${firstMember - secondMember}`;
       break;
-    case '+': rightAnswer = firstMember + secondMember;
+    case '+': result = `${firstMember + secondMember}`;
       break;
-    default: rightAnswer = firstMember * secondMember;
+    default: result = `${firstMember * secondMember}`;
   }
-  return rightAnswer;
+  return result;
 };
 
 const logic = () => {
