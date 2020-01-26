@@ -16,7 +16,7 @@ const calculator = (firstMember, operatorIndex, secondMember) => {
   return result;
 };
 
-const logic = () => {
+const generateQuestionAndAnswer = () => {
   const firstMember = getRandomNumber(1, 100);
   const secondMember = getRandomNumber(1, 100);
   const operatorIndex = getRandomNumber(0, 2);
@@ -25,4 +25,4 @@ const logic = () => {
   return cons(eqation, rightAnswer);
 };
 
-export default () => engine(description, logic);
+export default () => engine(description, generateQuestionAndAnswer);

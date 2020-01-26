@@ -2,27 +2,27 @@ import engine from '..';
 import { getRandomNumber, cons } from '../fasade';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const logic = () => {
-  const randomNum = getRandomNumber(1, 3000);
-  const isPrime = (num) => {
-    if (num < 2) {
+const checkIsNumPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
       return false;
     }
+  }
+  return true;
+};
 
-    let i = 2;
+const getRightAnswer = (num) => {
+  if (checkIsNumPrime(num) === false) return 'no';
+  return 'yes';
+};
 
-    while (i <= num / 2) {
-      if (num % i === 0) {
-        return 'no';
-      }
-      i += 1;
-    }
-
-    return 'yes';
-  };
-  const rightAnswer = `${isPrime(randomNum)}`;
+const generateQuestionAndAnswer = () => {
+  const randomNum = getRandomNumber(1, 3000);
+  const rightAnswer = getRightAnswer(randomNum);
   return cons(`${randomNum}`, rightAnswer);
 };
 
-export default () => engine(description, logic);
+export default () => engine(description, generateQuestionAndAnswer);

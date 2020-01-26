@@ -2,24 +2,25 @@ import engine from '..';
 import { getRandomNumber, cons } from '../fasade';
 
 const description = 'What number is missing in the progression?';
+const progressionMembersAmount = 10;
+const getProgressionAsString = (rightAnswerIndex, theFirstNum, progressionStep, cycle, acc) => {
+  if (cycle >= progressionMembersAmount) return acc;
+  if (cycle === rightAnswerIndex - 1) {
+    if (cycle === 0) return getProgressionAsString(rightAnswerIndex, theFirstNum, progressionStep, cycle + 1, '.. ');
+    return getProgressionAsString(rightAnswerIndex, theFirstNum, progressionStep, cycle + 1, `${acc}.. `);
+  }
 
-const logic = () => {
-  const progressionStep = getRandomNumber(11, 21); // logic will add this value every cycle
-  const theFirstNum = getRandomNumber(1, 10);
-  const numOfRightAnswer = getRandomNumber(1, 10);
-
-  const progressionAsString = (cycle, acc) => {
-    if (cycle >= 10) return acc; // amount of values in progression = 10
-    if (cycle === numOfRightAnswer - 1) {
-      if (cycle === 0) return progressionAsString(cycle + 1, '.. ');
-      return progressionAsString(cycle + 1, `${acc}.. `);
-    }
-
-    const value = theFirstNum + progressionStep * cycle;
-    return progressionAsString(cycle + 1, `${acc}${value} `);
-  };
-  const rightAnswer = `${theFirstNum + progressionStep * (numOfRightAnswer - 1)}`;
-  return cons(progressionAsString(0, ''), rightAnswer);
+  const currentValue = theFirstNum + progressionStep * cycle;
+  return getProgressionAsString(rightAnswerIndex, theFirstNum, progressionStep, cycle + 1, `${acc}${currentValue} `);
 };
 
-export default () => engine(description, logic);
+const generateQuestionAndAnswer = () => {
+  const progressionStep = getRandomNumber(11, 21);
+  const theFirstNum = getRandomNumber(1, 10);
+  const rightAnswerIndex = getRandomNumber(1, progressionMembersAmount);
+  const rightAnswer = `${theFirstNum + progressionStep * (rightAnswerIndex - 1)}`;
+  const progressionAsString = getProgressionAsString(rightAnswerIndex, theFirstNum, progressionStep, 0, '');
+  return cons(progressionAsString, rightAnswer);
+};
+
+export default () => engine(description, generateQuestionAndAnswer);
