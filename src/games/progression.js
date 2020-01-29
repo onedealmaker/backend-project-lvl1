@@ -1,5 +1,5 @@
-import engine from '..';
-import { getRandomNumber, cons } from '../fasade';
+import runEngine from '..';
+import { getRandomNumber, cons } from '../utils';
 
 const description = 'What number is missing in the progression?';
 const progressionMembersAmount = 10;
@@ -19,8 +19,8 @@ const generateQuestionAndAnswer = () => {
   const theFirstNum = getRandomNumber(1, 10);
   const rightAnswerIndex = getRandomNumber(1, progressionMembersAmount);
   const rightAnswer = `${theFirstNum + progressionStep * (rightAnswerIndex - 1)}`;
-  const progressionAsString = getProgressionAsString(rightAnswerIndex, theFirstNum, progressionStep, 0, '');
-  return cons(progressionAsString, rightAnswer);
+  const question = getProgressionAsString(rightAnswerIndex, theFirstNum, progressionStep, 0, '');
+  return cons(question, rightAnswer);
 };
 
-export default () => engine(description, generateQuestionAndAnswer);
+export default () => runEngine(description, generateQuestionAndAnswer);

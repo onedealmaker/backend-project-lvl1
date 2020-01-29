@@ -1,4 +1,4 @@
-import { readlineSync } from './fasade';
+import { readlineSync } from '../utils';
 
 export default () => {
   console.log('Welcome to the Brain Games!');

@@ -1,28 +1,28 @@
-import engine from '..';
-import { getRandomNumber, cons } from '../fasade';
+import runEngine from '..';
+import { getRandomNumber, cons } from '../utils';
 
 const description = 'What is the result of the expression?';
 const operators = '-+*';
 
-const calculator = (firstMember, operatorIndex, secondMember) => {
-  let result = '';
-  switch (operators.charAt(operatorIndex)) {
-    case '-': result = `${firstMember - secondMember}`;
+const calculator = (a, operator, b) => {
+  switch (operator) {
+    case '-':
+      return a - b;
+    case '+':
+      return a + b;
+    default:
       break;
-    case '+': result = `${firstMember + secondMember}`;
-      break;
-    default: result = `${firstMember * secondMember}`;
   }
-  return result;
+  return a * b;
 };
 
 const generateQuestionAndAnswer = () => {
-  const firstMember = getRandomNumber(1, 100);
-  const secondMember = getRandomNumber(1, 100);
+  const a = getRandomNumber(1, 100);
+  const b = getRandomNumber(1, 100);
   const operatorIndex = getRandomNumber(0, 2);
-  const eqation = `${firstMember} ${operators.charAt(operatorIndex)} ${secondMember}`;
-  const rightAnswer = `${(calculator(firstMember, operatorIndex, secondMember))}`;
-  return cons(eqation, rightAnswer);
+  const question = `${a} ${operators.charAt(operatorIndex)} ${b}`;
+  const rightAnswer = String(calculator(a, operators.charAt(operatorIndex), b));
+  return cons(question, rightAnswer);
 };
 
-export default () => engine(description, generateQuestionAndAnswer);
+export default () => runEngine(description, generateQuestionAndAnswer);

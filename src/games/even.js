@@ -1,13 +1,13 @@
-import engine from '..';
-import { getRandomNumber, cons } from '../fasade';
+import runEngine from '..';
+import { getRandomNumber, cons } from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const isNumberEven = (num) => num % 2 === 0;
 
 const generateQuestionAndAnswer = () => {
-  const randomNumber = getRandomNumber(1, 100);
-  const rightAnswer = isNumberEven(randomNumber) ? 'yes' : 'no';
-  return cons(randomNumber, rightAnswer);
+  const question = getRandomNumber(1, 100);
+  const rightAnswer = isNumberEven(question) ? 'yes' : 'no';
+  return cons(String(question), rightAnswer);
 };
 
-export default () => engine(description, generateQuestionAndAnswer);
+export default () => runEngine(description, generateQuestionAndAnswer);

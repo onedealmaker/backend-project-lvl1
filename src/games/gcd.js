@@ -1,14 +1,14 @@
-import engine from '..';
-import { getRandomNumber, cons } from '../fasade';
+import runEngine from '..';
+import { getRandomNumber, cons } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
+const findGcd = (a, b) => (b === 0 ? a : findGcd(b, a % b));
 
 const generateQuestionAndAnswer = () => {
-  const firstMember = getRandomNumber(1, 100);
-  const secondMember = getRandomNumber(1, 100);
-  const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
-  const rightAnswer = `${gcd(firstMember, secondMember)}`;
-  return cons(`${firstMember} ${secondMember}`, rightAnswer);
+  const a = getRandomNumber(1, 100);
+  const b = getRandomNumber(1, 100);
+  const rightAnswer = String(findGcd(a, b));
+  return cons(`${a} ${b}`, rightAnswer);
 };
 
-export default () => engine(description, generateQuestionAndAnswer);
+export default () => runEngine(description, generateQuestionAndAnswer);

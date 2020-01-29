@@ -1,5 +1,5 @@
-import engine from '..';
-import { getRandomNumber, cons } from '../fasade';
+import runEngine from '..';
+import { getRandomNumber, cons } from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const checkIsNumPrime = (num) => {
@@ -14,15 +14,10 @@ const checkIsNumPrime = (num) => {
   return true;
 };
 
-const getRightAnswer = (num) => {
-  if (checkIsNumPrime(num) === false) return 'no';
-  return 'yes';
-};
-
 const generateQuestionAndAnswer = () => {
-  const randomNum = getRandomNumber(1, 3000);
-  const rightAnswer = getRightAnswer(randomNum);
-  return cons(`${randomNum}`, rightAnswer);
+  const question = getRandomNumber(1, 3000);
+  const rightAnswer = checkIsNumPrime(question) ? 'yes' : 'no';
+  return cons(String(question), rightAnswer);
 };
 
-export default () => engine(description, generateQuestionAndAnswer);
+export default () => runEngine(description, generateQuestionAndAnswer);
