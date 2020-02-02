@@ -10,18 +10,20 @@ const calculator = (a, operator, b) => {
       return a - b;
     case '+':
       return a + b;
+    case '*':
+      return a * b;
     default:
-      break;
+      return null;
   }
-  return a * b;
 };
 
 const generateQuestionAndAnswer = () => {
   const a = getRandomNumber(1, 100);
   const b = getRandomNumber(1, 100);
-  const operatorIndex = getRandomNumber(0, 2);
-  const question = `${a} ${operators.charAt(operatorIndex)} ${b}`;
-  const rightAnswer = String(calculator(a, operators.charAt(operatorIndex), b));
+  const operatorIndex = getRandomNumber(0, operators.length - 1);
+  const operator = operators.charAt(operatorIndex);
+  const question = `${a} ${operator} ${b}`;
+  const rightAnswer = String(calculator(a, operator, b));
   return cons(question, rightAnswer);
 };
 

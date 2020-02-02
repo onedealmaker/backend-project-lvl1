@@ -2,9 +2,9 @@ import { readlineSync, car, cdr } from './utils';
 
 const rightAnwersNeed = 3;
 
-export default (task, getQuestionAndAnswer) => {
+export default (description, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
-  console.log(task);
+  console.log(description);
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
 
