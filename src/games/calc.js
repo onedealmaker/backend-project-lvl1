@@ -4,7 +4,7 @@ import { getRandomNumber, cons } from '../utils';
 const description = 'What is the result of the expression?';
 const operators = '-+*';
 
-const calculator = (a, operator, b) => {
+const calculate = (a, operator, b) => {
   switch (operator) {
     case '-':
       return a - b;
@@ -23,7 +23,7 @@ const generateQuestionAndAnswer = () => {
   const operatorIndex = getRandomNumber(0, operators.length - 1);
   const operator = operators.charAt(operatorIndex);
   const question = `${a} ${operator} ${b}`;
-  const rightAnswer = String(calculator(a, operator, b));
+  const rightAnswer = String(calculate(a, operator, b));
   return cons(question, rightAnswer);
 };
 

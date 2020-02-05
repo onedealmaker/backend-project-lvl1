@@ -4,13 +4,13 @@ import { getRandomNumber, cons } from '../utils';
 const description = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-const currentMember = (firstMember, step, cycle) => firstMember + step * cycle;
+const getMemberValue = (firstMember, step, memberIndex) => firstMember + step * memberIndex;
 
 const getQuestion = (rightAnswerIndex, firstMember, step) => {
   let question = '';
-  for (let cycle = 0; cycle < progressionLength; cycle += 1) {
-    if (rightAnswerIndex === cycle) question += '.. ';
-    else question += `${currentMember(firstMember, step, cycle)} `;
+  for (let memberIndex = 0; memberIndex < progressionLength; memberIndex += 1) {
+    if (rightAnswerIndex === memberIndex) question = `${question}.. `;
+    else question = `${question}${getMemberValue(firstMember, step, memberIndex)} `;
   }
   return question.trim();
 };
@@ -19,7 +19,7 @@ const generateQuestionAndAnswer = () => {
   const step = getRandomNumber(11, 21);
   const firstMember = getRandomNumber(1, 10);
   const rightAnswerIndex = getRandomNumber(0, progressionLength - 1);
-  const rightAnswer = `${firstMember + step * (rightAnswerIndex)}`;
+  const rightAnswer = String(getMemberValue(firstMember, step, rightAnswerIndex));
   const question = getQuestion(rightAnswerIndex, firstMember, step);
   return cons(question, rightAnswer);
 };

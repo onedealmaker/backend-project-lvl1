@@ -2,7 +2,14 @@ import runEngine from '..';
 import { getRandomNumber, cons } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
-const findGcd = (a, b) => (b === 0 ? a : findGcd(b, a % b));
+
+const findGcd = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+
+  return findGcd(b, a % b);
+};
 
 const generateQuestionAndAnswer = () => {
   const a = getRandomNumber(1, 100);
