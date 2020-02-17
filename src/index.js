@@ -1,4 +1,4 @@
-import { readlineSync, car, cdr } from './utils';
+import { readlineSync } from './utils';
 
 const rightAnwersNeed = 3;
 

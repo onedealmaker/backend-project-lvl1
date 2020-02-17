@@ -1,5 +1,5 @@
 import runEngine from '..';
-import { getRandomNumber, cons } from '../utils';
+import { getRandomNumber } from '../utils';
 
 const description = 'What number is missing in the progression?';
 const progressionLength = 10;
