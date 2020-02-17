@@ -1,5 +1,5 @@
 import runEngine from '..';
-import { getRandomNumber, cons } from '../utils';
+import { getRandomNumber } from '../utils';
 
 const description = 'What is the result of the expression?';
 const operators = '-+*';
@@ -24,7 +24,7 @@ const generateQuestionAndAnswer = () => {
   const operator = operators.charAt(operatorIndex);
   const question = `${a} ${operator} ${b}`;
   const rightAnswer = String(calculate(a, operator, b));
-  return cons(question, rightAnswer);
+  return [question, rightAnswer];
 };
 
 export default () => runEngine(description, generateQuestionAndAnswer);

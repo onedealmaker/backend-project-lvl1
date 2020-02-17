@@ -1,5 +1,5 @@
 import runEngine from '..';
-import { getRandomNumber, cons } from '../utils';
+import { getRandomNumber } from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const checkIsNumPrime = (num) => {
@@ -17,7 +17,7 @@ const checkIsNumPrime = (num) => {
 const generateQuestionAndAnswer = () => {
   const question = getRandomNumber(1, 3000);
   const rightAnswer = checkIsNumPrime(question) ? 'yes' : 'no';
-  return cons(String(question), rightAnswer);
+  return [String(question), rightAnswer];
 };
 
 export default () => runEngine(description, generateQuestionAndAnswer);

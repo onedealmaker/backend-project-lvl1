@@ -1,5 +1,5 @@
 import runEngine from '..';
-import { getRandomNumber, cons } from '../utils';
+import { getRandomNumber } from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -16,7 +16,7 @@ const generateQuestionAndAnswer = () => {
   const b = getRandomNumber(1, 100);
   const question = `${a} ${b}`;
   const rightAnswer = String(findGcd(a, b));
-  return cons(question, rightAnswer);
+  return [question, rightAnswer];
 };
 
 export default () => runEngine(description, generateQuestionAndAnswer);

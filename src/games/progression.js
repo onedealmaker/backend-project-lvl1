@@ -21,7 +21,7 @@ const generateQuestionAndAnswer = () => {
   const rightAnswerIndex = getRandomNumber(0, progressionLength - 1);
   const rightAnswer = String(getMemberValue(firstMember, step, rightAnswerIndex));
   const question = getQuestion(rightAnswerIndex, firstMember, step);
-  return cons(question, rightAnswer);
+  return [question, rightAnswer];
 };
 
 export default () => runEngine(description, generateQuestionAndAnswer);

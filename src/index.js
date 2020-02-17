@@ -15,8 +15,7 @@ export default (description, getQuestionAndAnswer) => {
     }
 
     const questionAndAnswer = getQuestionAndAnswer();
-    const question = car(questionAndAnswer);
-    const trueAnswer = cdr(questionAndAnswer);
+    const [question, trueAnswer] = questionAndAnswer;
     console.log(`Question: ${question}`);
     const playerAnswer = readlineSync.question('Your answer: ');
 
